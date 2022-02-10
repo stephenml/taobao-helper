@@ -82,7 +82,7 @@ let submitFun = () => {
 let main = () => {
   let startTime = new Date(buyTime).getTime()
   let nowTime = new Date().getTime()
-  if (nowTime > startTime) {
+  if (nowTime >= startTime) {
     let href = window.location.href
     // 判断当前所在页面
     if (href.indexOf('cart') !== -1) {
