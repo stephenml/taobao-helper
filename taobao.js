@@ -47,9 +47,11 @@ let settleFun = () => {
 
   settleTimer = setInterval(() => {
     let go_button = document.getElementById('J_Go')
+    let select_all = document.getElementById('J_SelectAll1')
     if (go_button && go_button.className.indexOf('submit-btn-disabled') === -1) {
       console.log(`当前时间为：${dateFormat('YYYY-mm-dd HH:MM:SS', new Date())} 开始抢购`)
       clearInterval(settleTimer)
+      select_all.click()
       go_button.click()
     } else {
       console.log(`当前时间为：${dateFormat('YYYY-mm-dd HH:MM:SS', new Date())} 购物车中未选择商品 无法抢购`)
